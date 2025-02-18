@@ -1,15 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#2196F3"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center"
     tools:context=".views.starter.StartFragment">
 
-    <!-- TODO: Update blank fragment layout -->
+    <ImageView
+        android:src="@mipmap/ic_launcher_round"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_100sdp"/>
+
+
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bebas_neue"
+        android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
+        android:textColor="#F66E3E"
+        android:layout_margin="@dimen/_32sdp"
+        android:gravity="center"
+        android:text="Welcome to Elexaa Mart" />
 
-</FrameLayout>
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_32sdp"
+        android:layout_marginVertical="@dimen/_8sdp"
+        style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+        android:fontFamily="@font/poppins"
+        android:text="Login"
+        android:textStyle="bold" />
+    <Button
+        android:id="@+id/btnRegister"
+        app:strokeColor="#F66E3E"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_32sdp"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:fontFamily="@font/poppins"
+        android:text="Register"
+        android:textStyle="bold" />
+
+
+
+</LinearLayout>
