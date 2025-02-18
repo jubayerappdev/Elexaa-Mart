@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "155980346999",
+    "project_id": "elexaa-mart-2705b",
+    "storage_bucket": "elexaa-mart-2705b.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:155980346999:android:1fc5e801c8c3dc5211b872",
+        "android_client_info": {
+          "package_name": "com.creativeitinstitute.elexaamart"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAxvGOSBBk98x3zBbKXgYfFy66YJs3WpqM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
