@@ -18,6 +18,7 @@ firebaseMessaging = "24.1.0"
 firebaseAnalytics = "22.2.0"
 navigationFragmentKtx = "2.8.7"
 navigationUiKtx = "2.8.7"
+lottie="6.6.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -36,6 +37,8 @@ firebase-messaging = { group = "com.google.firebase", name = "firebase-messaging
 firebase-analytics = { group = "com.google.firebase", name = "firebase-analytics", version.ref = "firebaseAnalytics" }
 androidx-navigation-fragment-ktx = { group = "androidx.navigation", name = "navigation-fragment-ktx", version.ref = "navigationFragmentKtx" }
 androidx-navigation-ui-ktx = { group = "androidx.navigation", name = "navigation-ui-ktx", version.ref = "navigationUiKtx" }
+lottie= { group = "com.airbnb.android", name = "lottie", version.ref = "lottie" }
+
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

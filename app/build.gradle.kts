@@ -58,6 +58,9 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
+    //    animation
+    implementation(libs.lottie)
+
     //ssp/sdp
     implementation ("com.intuit.ssp:ssp-android:1.1.1")
     implementation ("com.intuit.sdp:sdp-android:1.1.1")
