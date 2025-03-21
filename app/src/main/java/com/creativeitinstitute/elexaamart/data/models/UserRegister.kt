@@ -5,5 +5,5 @@ data class UserRegister(
     val email:String,
     val password:String,
     val userType:String,
-    val userID:String
+    var userID:String
 )

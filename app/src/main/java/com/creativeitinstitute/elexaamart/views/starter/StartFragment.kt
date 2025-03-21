@@ -4,8 +4,11 @@ import androidx.navigation.fragment.findNavController
 import com.creativeitinstitute.elexaamart.R
 import com.creativeitinstitute.elexaamart.base.BaseFragment
 import com.creativeitinstitute.elexaamart.databinding.FragmentStartBinding
+import com.google.firebase.auth.FirebaseAuth
+import dagger.hilt.android.AndroidEntryPoint
 
 
+@AndroidEntryPoint
 class StartFragment : BaseFragment<FragmentStartBinding>(FragmentStartBinding::inflate) {
 
 
@@ -13,6 +16,8 @@ class StartFragment : BaseFragment<FragmentStartBinding>(FragmentStartBinding::i
 
 
     override fun setListener() {
+
+        setUpAutoLogin()
 
         with(binding){
 
@@ -26,6 +31,14 @@ class StartFragment : BaseFragment<FragmentStartBinding>(FragmentStartBinding::i
                 findNavController().navigate(R.id.action_startFragment_to_registerFragment)
 
             }
+        }
+
+    }
+
+    private fun setUpAutoLogin() {
+        FirebaseAuth.getInstance().currentUser?.let {
+
+            findNavController().navigate(R.id.action_startFragment_to_dashFragment)
         }
 
     }

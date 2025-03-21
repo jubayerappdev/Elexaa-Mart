@@ -2,18 +2,20 @@ package com.creativeitinstitute.elexaamart.views.register
 
 import android.widget.Toast
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
+import com.creativeitinstitute.elexaamart.R
 import com.creativeitinstitute.elexaamart.base.BaseFragment
 import com.creativeitinstitute.elexaamart.core.DataState
 import com.creativeitinstitute.elexaamart.data.models.UserRegister
 import com.creativeitinstitute.elexaamart.databinding.FragmentRegisterBinding
 import com.creativeitinstitute.elexaamart.isEmpty
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class RegisterFragment : BaseFragment<FragmentRegisterBinding>(FragmentRegisterBinding::inflate) {
 
 
     private val viewModel : RegistrationViewModel by viewModels ()
-
 
 
     override  fun setListener() {
@@ -32,8 +34,8 @@ class RegisterFragment : BaseFragment<FragmentRegisterBinding>(FragmentRegisterB
                         etName.text.toString(),
                         etEmail.text.toString(),
                         etPassword.text.toString(),
-                        "Seller",
-                        ""
+                        userType = "Seller",
+                        userID = ""
                     )
 
                     viewModel.userRegistration(user)
@@ -63,6 +65,7 @@ class RegisterFragment : BaseFragment<FragmentRegisterBinding>(FragmentRegisterB
                 is DataState.Success -> {
                     loading.dismiss()
                     Toast.makeText(context, "created User: ${it.data}", Toast.LENGTH_SHORT).show()
+                    findNavController().navigate(R.id.action_registerFragment_to_dashFragment)
                 }
             }
         }
