@@ -1,15 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#5A92C3"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".views.dashboard.seller.upload.UploadProductFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
 
-</FrameLayout>
+        <ImageView
+            android:id="@+id/iv_product"
+            android:src="@drawable/ic_image_placeholder"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_200sdp"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+           app:endIconMode="clear_text"
+            android:layout_margin="@dimen/_8sdp"
+            android:layout_marginHorizontal="@dimen/_16sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/product_name">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:inputType="text"
+                android:id="@+id/et_product_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            app:endIconMode="clear_text"
+            android:layout_margin="@dimen/_8sdp"
+            android:layout_marginHorizontal="@dimen/_16sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/product_description">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:inputType="textMultiLine"
+                android:id="@+id/et_product_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            app:endIconMode="clear_text"
+            android:layout_margin="@dimen/_8sdp"
+            android:layout_marginHorizontal="@dimen/_16sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/product_price">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:inputType="numberDecimal"
+                android:id="@+id/et_product_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            app:endIconMode="clear_text"
+            android:layout_margin="@dimen/_8sdp"
+            android:layout_marginHorizontal="@dimen/_16sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/product_amount">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:inputType="number"
+                android:id="@+id/et_product_amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:text="@string/upload_product"
+            android:id="@+id/btnUploadProduct"
+            android:fontFamily="@font/poppins"
+            android:textStyle="bold"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+            android:layout_marginHorizontal="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_32sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+
+    </LinearLayout>
+
+
+</ScrollView>

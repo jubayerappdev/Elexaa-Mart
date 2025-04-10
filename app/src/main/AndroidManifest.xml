@@ -2,7 +2,16 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
     <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:name=".di.MyApp"
@@ -16,9 +25,9 @@
         android:theme="@style/Theme.ElexaaMart"
         tools:targetApi="31">
         <activity
-            android:theme="@style/Theme.ElexaaMart.App.Bar"
             android:name=".views.dashboard.seller.SellerDashboard"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.ElexaaMart.App.Bar" />
         <activity
             android:name=".views.starter.MainActivity"
             android:exported="true">
