@@ -6,4 +6,5 @@
     </style>
 
     <style name="Theme.ElexaaMart" parent="Base.Theme.ElexaaMart" />
+    <style name="Theme.ElexaaMart.App.Bar" parent="Theme.Material3.DayNight" />
 </resources>

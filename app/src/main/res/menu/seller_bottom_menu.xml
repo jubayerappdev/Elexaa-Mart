@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:title="@string/product"
+        android:id="@+id/product"
+        android:icon="@drawable/ic_product"
+        />
+    <item
+        android:title="@string/add"
+        android:id="@+id/add"
+        android:icon="@drawable/ic_add_task"
+        />
+    <item
+        android:title="@string/profile"
+        android:id="@+id/profile"
+        android:icon="@drawable/ic_profile"
+        />
+
+</menu>

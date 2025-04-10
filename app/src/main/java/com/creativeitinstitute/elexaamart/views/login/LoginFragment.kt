@@ -1,5 +1,6 @@
 package com.creativeitinstitute.elexaamart.views.login
 
+import android.content.Intent
 import android.widget.Toast
 import androidx.fragment.app.viewModels
 
@@ -11,6 +12,7 @@ import com.creativeitinstitute.elexaamart.data.models.UserLogin
 
 import com.creativeitinstitute.elexaamart.databinding.FragmentLoginBinding
 import com.creativeitinstitute.elexaamart.isEmpty
+import com.creativeitinstitute.elexaamart.views.dashboard.seller.SellerDashboard
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -59,7 +61,8 @@ class LoginFragment : BaseFragment<FragmentLoginBinding>(FragmentLoginBinding::i
                 is DataState.Success -> {
                     loading.dismiss()
                     Toast.makeText(context, "created User: ${it.data}", Toast.LENGTH_SHORT).show()
-                    findNavController().navigate(R.id.action_loginFragment_to_dashFragment)
+                    startActivity(Intent(requireContext(), SellerDashboard::class.java))
+                    requireActivity().finish()
                 }
             }
         }
