@@ -3,6 +3,8 @@ package com.creativeitinstitute.elexaamart.di
 import com.creativeitinstitute.elexaamart.data.repositories.AuthRepository
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.storage.FirebaseStorage
+import com.google.firebase.storage.StorageReference
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -24,6 +26,12 @@ class FirebaseModule {
     fun providesFirebaseFireStoreDB() : FirebaseFirestore{
 
         return FirebaseFirestore.getInstance()
+    }
+    @Provides
+    @Singleton
+    fun providesFirebaseStorage() : StorageReference{
+
+        return FirebaseStorage.getInstance().reference
     }
 
     @Provides

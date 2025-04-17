@@ -69,4 +69,13 @@ dependencies {
 
     implementation(libs.hilt.android)
     kapt(libs.hilt.compiler)
+
+    //ImagePicker
+    implementation(libs.imagepicker)
+
+    
+    implementation(libs.activity.ktx)
+    implementation(libs.fragment.ktx)
+
+
 }
