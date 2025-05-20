@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/customer_nav"
+    app:startDestination="@id/customerHomeFragment">
+
+    <fragment
+        android:id="@+id/customerHomeFragment"
+        android:name="com.creativeitinstitute.elexaamart.CustomerHomeFragment"
+        android:label="fragment_customer_home"
+        tools:layout="@layout/fragment_customer_home" />
+</navigation>

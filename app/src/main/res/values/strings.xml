@@ -14,4 +14,7 @@
     <string name="product_price">Product Price</string>
     <string name="product_amount">Product Amount</string>
     <string name="upload_product">Upload Product</string>
+    <string name="macmini">Apple Mac Mini M4</string>
+    <string name="details_macmini">Apple has given its Mac Mini a completely new case that now fits its name better. Despite its much more compact dimensions, its connectivity has gotten better and there are finally ports on the front. However, the placement of the power button on the underside of the case is a clear design mistake. Furthermore, there still aren\'t any maintenance/upgrade options for end users, for example in the shape of a compact M.2 2242 SSD.</string>
+    <string name="seller_product_list">List of seller products</string>
 </resources>

@@ -8,10 +8,12 @@ import androidx.navigation.fragment.findNavController
 import com.creativeitinstitute.elexaamart.R
 import com.creativeitinstitute.elexaamart.base.BaseFragment
 import com.creativeitinstitute.elexaamart.core.DataState
+import com.creativeitinstitute.elexaamart.core.Nodes
 import com.creativeitinstitute.elexaamart.data.models.UserLogin
 
 import com.creativeitinstitute.elexaamart.databinding.FragmentLoginBinding
 import com.creativeitinstitute.elexaamart.isEmpty
+import com.creativeitinstitute.elexaamart.views.dashboard.customer.CustomerDashboard
 import com.creativeitinstitute.elexaamart.views.dashboard.seller.SellerDashboard
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -61,8 +63,25 @@ class LoginFragment : BaseFragment<FragmentLoginBinding>(FragmentLoginBinding::i
                 is DataState.Success -> {
                     loading.dismiss()
                     Toast.makeText(context, "created User: ${it.data}", Toast.LENGTH_SHORT).show()
-                    startActivity(Intent(requireContext(), SellerDashboard::class.java))
-                    requireActivity().finish()
+
+
+                    it.data?.apply {
+                        when(userType){
+                            Nodes.USER_TYPE_CUSTOMER ->{
+                                startActivity(Intent(requireContext(), CustomerDashboard::class.java))
+                                requireActivity().finish()
+                            }
+                            Nodes.USER_TYPE_SELLER ->{
+                                startActivity(Intent(requireContext(), SellerDashboard::class.java))
+                                requireActivity().finish()
+                            }
+                            else -> {
+                                Toast.makeText(context, "Something Went Wrong!", Toast.LENGTH_SHORT).show()
+                            }
+                        }
+                    }
+
+
                 }
             }
         }

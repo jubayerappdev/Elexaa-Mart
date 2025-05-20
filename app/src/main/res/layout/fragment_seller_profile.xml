@@ -1,15 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#8D96D1"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center"
     tools:context=".views.dashboard.seller.profile.SellerProfileFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
 
-</FrameLayout>
+        <ImageView
+            android:id="@+id/iv_profile"
+            android:src="@drawable/ic_image_placeholder"
+            android:layout_gravity="center"
+            android:layout_marginVertical="@dimen/_32sdp"
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="@dimen/_200sdp"/>
+
+        <EditText
+            android:id="@+id/txt_shop_name"
+            android:layout_marginHorizontal="@dimen/_32sdp"
+            android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
+            android:gravity="center"
+            android:fontFamily="@font/poppins"
+            android:textColor="#673AB7"
+            tools:text="Elexaa Mart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:inputType="text"
+                tools:text="Jubayer Al As'ad"
+                android:fontFamily="@font/poppins"
+                android:id="@+id/et_name"
+                android:layout_marginHorizontal="@dimen/_32sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:inputType="textEmailAddress"
+            tools:text="juboraj@gmail.com"
+            android:fontFamily="@font/poppins"
+            android:id="@+id/et_email"
+            android:layout_marginHorizontal="@dimen/_32sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+        <Button
+            android:text="Update Profile"
+            android:id="@+id/btn_update"
+            android:fontFamily="@font/poppins"
+            android:textStyle="bold"
+            app:strokeColor="#FF9800"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_marginHorizontal="@dimen/_32sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+
+</ScrollView>
